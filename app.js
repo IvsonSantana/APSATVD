@@ -1,28 +1,33 @@
 function consultarNome(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    let nome = document.querySelector('#pesquisa').value; 
-    let url = `https://digi-api.com/api/v1/digimon/${nome}`; 
+    let nome = document.querySelector('#pesquisa').value.trim();
+    if (!nome) {
+        return;
+    }
+
+    let url = `https://digi-api.com/api/v1/digimon/${nome}`;
+
     fetch(url)
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('Erro na resposta da rede'); 
-            }
-            return response.json(); 
-        })
-        .then(function(data) {
-            console.log(data); 
+        .then((response) => response.json())
+        .then((data) => {
             document.querySelector('#Nome').textContent = data.name;
 
-            if (data.images && data.images[0]) { 
-                document.querySelector('#Imagem').src = data.images[0].href; 
-                document.querySelector('#Imagem').alt = data.name; 
+            if (data.images && data.images[0]) {
+                document.querySelector('#Imagem').src = data.images[0].href;
+                document.querySelector('#Imagem').alt = data.name;
             } else {
-                document.querySelector('#Imagem').src = ''; 
-                document.querySelector('#Imagem').alt = 'Imagem não encontrada'; 
+                document.querySelector('#Imagem').src = '';
+                document.querySelector('#Imagem').alt = 'Imagem não encontrada';
             }
+
+            document.querySelector('#resultado').style.display = 'block';
         })
-        .catch(function(error) {
+        .catch((error) => {
             console.error('Ocorreu um problema com a operação de fetch:', error);
+            document.querySelector('#Nome').textContent = 'Erro ao buscar Digimon';
+            document.querySelector('#Imagem').src = '';
+            document.querySelector('#Imagem').alt = 'Imagem não encontrada';
         });
 }
+
