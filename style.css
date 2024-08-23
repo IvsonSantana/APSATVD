@@ -1,73 +1,154 @@
+/* Estilo básico do body */
 body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
     margin: 0;
-}
-header {
-    width: 100%;
-    position: absolute;
-    top: 0;
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
 }
 
+/* Estilo do container principal */
+.container {
+    padding: 20px;
+    max-width: 1200px; /* Define uma largura máxima para o container */
+    width: 100%; /* Garante que o container use a largura total disponível */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilo do header */
+header {
+    width: 100%; /* Garante que o header ocupe toda a largura da tela */
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o header fique acima do conteúdo */
+    background-color: #f8f9fa; /* Cor de fundo do header */
+    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior para o header */
+}
+
+/* Estilo do header nav */
 header nav {
     width: 100%;
 }
 
-.elementos {
-    display: flex;
-    margin-top: 80px;
-    flex-direction: column;
-    align-items: center;  
-    width: 100%;
-    max-width: 300px;
-}
-
+/* Estilo do formulário */
 form {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
-    width: 60%;
-}
-
-
-
-img#Imagem {
-    max-width: 300px;
+    margin: 20px 0;
     width: 100%;
-    height: auto;
-    margin-top: 20px;
+    max-width: 600px; /* Define uma largura máxima para o formulário */
 }
 
+/* Imagens principais do Digimon */
+#imagem-digimon {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container da imagem com estilo */
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px; 
-    height: auto;
+    width: 100%;
+    max-width: 300px;
     padding: 10px;
     margin-top: 20px;
-    border: 2px solid #ccc; 
-    border-radius: 10px; 
+    border: 2px solid #ccc;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
-
+/* Imagem dentro do container */
 .image-container img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-
+/* Efeito de zoom na imagem ao passar o mouse */
 .image-container:hover img {
     transform: scale(1.1);
 }
 
-#Nome{
-    max-width: 300px;
+/* Estilo dos nomes dos Digimons */
+#nome-digimon {
+    max-width: 100%;
     text-align: center;
+}
+
+/* Estilo dos itens de evolução */
+.evolucao-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Estilo para cada item de evolução */
+.evolucao {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+/* Estilo para imagens das evoluções */
+.evolucao img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Títulos e textos das evoluções */
+.evolucao h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.evolucao p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Consultas de mídia para ajustar o layout em diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #imagem-digimon {
+        max-width: 100%;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .evolucao-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .evolucao {
+        margin: 10px 0;
+        padding: 5px;
+    }
+
+    .evolucao img {
+        max-width: 80%;
+    }
 }
