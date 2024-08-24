@@ -37,12 +37,12 @@ function consultarNome(event) {
 
             if (tipoDigimon) {
                 const type = data.types.length ? data.types[0].type : 'N/A';
-                tipoDigimon.textContent = `Type: ${type}`;
+                tipoDigimon.textContent = `Tipo: ${type}`;
             }
 
             if (atributoDigimon) {
                 const attributes = data.attributes.map(attr => attr.attribute).join(', ');
-                atributoDigimon.textContent = `Attributes: ${attributes}`;
+                atributoDigimon.textContent = `Atributos: ${attributes}`;
             }
 
             // Exibindo a seção do Digimon
