@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div id="Digivice">
+                <div class="digivice-container">
                 <img src="/Imagens/Digivice_tri.webp" alt="">
               </div>
                 <form class="form-inline my-2 my-lg-0">
@@ -27,14 +27,19 @@
     </header>
 
     <div id="resultado-digimon" style="display: none;">
-        <div class="image-container">
-            <img id="imagem-digimon" alt="Imagem do Digimon">
+        <div class="digimon-container">
+            <div class="image-container">
+                <img id="imagem-digimon" alt="Imagem do Digimon">
+            </div>
+            <div class="info-container">
+                <h1 id="nome-digimon"></h1>
+                <p id="tipo-digimon"></p>
+                <p id="atributo-digimon"></p>
+                <p id="level-digimon"></p>
+            </div>
         </div>
-        <h1 id="nome-digimon"></h1>
-        <p id="tipo-digimon"></p>
-        <p id="atributo-digimon"></p>
-        <p id="level-digimon"></p>
     </div>
+    
 
     <div id="resultado-evolucao-anterior" class="evolucao-container" style="display: none;">
         <h2>Evolução Anterior</h2>

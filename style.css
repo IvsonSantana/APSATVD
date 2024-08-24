@@ -1,54 +1,69 @@
-/* Estilo básico do body */
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+    min-height: 100vh; 
     margin: 0;
-    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    font-family: Arial, sans-serif; 
+    padding-top: 80px
 }
 
-/* Estilo do container principal */
+
 .container {
     padding: 20px;
-    max-width: 1200px; /* Define uma largura máxima para o container */
-    width: 100%; /* Garante que o container use a largura total disponível */
-    margin: 0 auto; /* Centraliza o container */
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto; 
 }
 
-/* Estilo do header */
+
 header {
-    width: 100%; /* Garante que o header ocupe toda a largura da tela */
-    position: fixed; /* Fixa o header no topo */
+    width: 100%; 
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000; /* Garante que o header fique acima do conteúdo */
-    background-color: #f8f9fa; /* Cor de fundo do header */
-    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior para o header */
+    z-index: 1000;
+    background-color: #f8f9fa; 
+    border-bottom: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo do header nav */
+
 header nav {
     width: 100%;
 }
 
-/* Estilo do formulário */
+
 form {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 600px; /* Define uma largura máxima para o formulário */
+    align-items: center;
+    margin: 20px auto; 
+    max-width: 600px;
 }
 
-/* Imagens principais do Digimon */
+
+
+.digivice-container img {
+    width: 50px; 
+    height: auto; 
+}
+
+
+.digivice-container {
+    margin-right: 20px; 
+    display: flex;
+    align-items: center;
+}
+
+
 #imagem-digimon {
     max-width: 100%;
     height: auto;
 }
 
-/* Container da imagem com estilo */
 .image-container {
     display: flex;
     justify-content: center;
@@ -63,25 +78,50 @@ form {
     transition: transform 0.3s ease;
 }
 
-/* Imagem dentro do container */
-.image-container img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-/* Efeito de zoom na imagem ao passar o mouse */
 .image-container:hover img {
     transform: scale(1.1);
 }
 
-/* Estilo dos nomes dos Digimons */
+
 #nome-digimon {
     max-width: 100%;
     text-align: center;
 }
+.digimon-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Estilo para a imagem do Digimon */
+.image-container img {
+    width: 200px; /* Aumentei o tamanho da imagem para se ajustar ao novo layout */
+    height: auto;
+    border-radius: 10px;
+}
 
-/* Estilo dos itens de evolução */
+/* Estilo para o container de informações */
+.info-container h1 {
+    margin: 0;
+    font-size: 32px; /* Ajustei o tamanho do texto para ficar mais destacado */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-container p {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+
+
 .evolucao-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -90,7 +130,7 @@ form {
     width: 100%;
 }
 
-/* Estilo para cada item de evolução */
+
 .evolucao {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -100,14 +140,14 @@ form {
     overflow: hidden;
 }
 
-/* Estilo para imagens das evoluções */
+
 .evolucao img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
 }
 
-/* Títulos e textos das evoluções */
+
 .evolucao h2 {
     margin-top: 10px;
     font-size: 18px;
@@ -118,7 +158,7 @@ form {
     color: #555;
 }
 
-/* Consultas de mídia para ajustar o layout em diferentes tamanhos de tela */
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;
