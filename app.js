@@ -11,7 +11,7 @@ function consultarNome(event) {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            // Verifica se os elementos existem antes de definir propriedades
+            
             const nomeDigimon = document.querySelector('#nome-digimon');
             const imagemDigimon = document.querySelector('#imagem-digimon');
             const levelDigimon = document.querySelector('#level-digimon');
@@ -45,14 +45,14 @@ function consultarNome(event) {
                 atributoDigimon.textContent = `Atributos: ${attributes}`;
             }
 
-            // Exibindo a seção do Digimon
+            
             const resultadoDigimon = document.querySelector('#resultado-digimon');
             if (resultadoDigimon) resultadoDigimon.style.display = 'block';
 
-            // Evolução anterior
+            
             const evolucaoAnteriorContainer = document.querySelector('#resultado-evolucao-anterior');
             if (evolucaoAnteriorContainer) {
-                evolucaoAnteriorContainer.innerHTML = ''; // Limpa o conteúdo anterior
+                evolucaoAnteriorContainer.innerHTML = ''; 
                 if (data.priorEvolutions && data.priorEvolutions.length > 0) {
                     data.priorEvolutions.forEach(evolucao => {
                         const evolucaoDiv = document.createElement('div');
@@ -81,10 +81,10 @@ function consultarNome(event) {
                 }
             }
 
-            // Evoluções possíveis
+            
             const evolucoesPossiveisContainer = document.querySelector('#resultado-evolucoes-possiveis');
             if (evolucoesPossiveisContainer) {
-                evolucoesPossiveisContainer.innerHTML = ''; // Limpa o conteúdo anterior
+                evolucoesPossiveisContainer.innerHTML = ''; 
                 if (data.nextEvolutions && data.nextEvolutions.length > 0) {
                     data.nextEvolutions.forEach(evolucao => {
                         const evolucaoDiv = document.createElement('div');
