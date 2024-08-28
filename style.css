@@ -87,8 +87,8 @@ header {
 
 .digimon-container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 3vw;
     margin-top: 2vh;
     padding: 2vh;
@@ -162,7 +162,7 @@ header {
     width: 100%;
 }
 
-#resultado-evolucao-anterior .evolucao, #resultado-evolucoes-possiveis .evolucao {
+#resultado-evolucao-anterior .evolucao, #resultado-evolucoes-possiveis .evolucao, .digimon-container {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1vh;
