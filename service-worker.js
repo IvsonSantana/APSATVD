@@ -4,7 +4,9 @@ self.addEventListener('install', (e) => {
             '/index.html',
             '/styles.css',
             '/app.js',
-            '/manifest.json'
+            '/manifest.json',
+            '/icons/playstore.png'
+            
         ]))
     );
 });
