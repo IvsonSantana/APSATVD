@@ -1,7 +1,8 @@
 {
     "name": "DigimonDex-PWA",
     "short_name": "DigDex",
-    "start_url": "/",
+    "start_url": "/index.html",
+    "description": "Digimon Dex",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#28a745",

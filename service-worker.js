@@ -7,7 +7,8 @@ const urlsToCache = [
   '/manifest.json',
   '/icons/196.png',
   '/icons/appstore.png',
-  '/icons/playstore.png'
+  '/icons/playstore.png',
+  '/imagens/Digivice_tri.webp'
 ];
 
 // Instalando o Service Worker e armazenando em cache
