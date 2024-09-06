@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
 function consultarNome(event) {
     event.preventDefault();
 
@@ -126,5 +125,4 @@ function consultarNome(event) {
             const resultadoDigimon = document.querySelector('#resultado-digimon');
             if (resultadoDigimon) resultadoDigimon.style.display = 'block';
         });
-}
-});
+};
